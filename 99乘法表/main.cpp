@@ -16,28 +16,28 @@ void _for(void)
 {
     int i,j;
 
-    for (i=1;i<=9;i++)
+    for (i=1 ; i<=9 ; i++)
         {
-            for (j=1;j<=i;j++)
+            for (j=1 ; j<=i ; j++)
             {
-                cout<<j<<"x"<<i<<"= "<<i*j<<" ";
+                cout << j << "x" << i << "=" << i*j << " ";
             }
-            cout<<"\n";
+            cout << "\n";
         }
-        cout<<endl;
+        cout << endl;
 }
 
 void _while(void)
 {
     int m=1,n=1;
-    while(m<=9)
+    while (m<=9)
     {
-        while(n<=m)
+        while (n<=m)
         {
-            cout<<n<<"x"<<m<<"= "<<m*n<<" ";
+            cout << n << "x" << m << "=" << m*n << " ";
             n++;
         }
-        cout<<"\n";
+        cout << "\n";
         m++;
         n=1;
     }
