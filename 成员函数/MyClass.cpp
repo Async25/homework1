@@ -13,7 +13,12 @@ class MyClass
 
             for (i=0 ; i<length ; i++)
             {
-                cout << Array[i] << ", ";
+                if (i>0)
+                {
+                    cout << ", ";
+                }
+
+                cout << Array[i];
 
                 if (Array[i] < Min)
                 {
@@ -32,19 +37,38 @@ class MyClass
 
             for (i=0 ; i<length ; i++)
             {
-                cout << Array[i] << ", ";
+                if (i>0)
+                {
+                    cout << ", ";
+                }
+
+                cout << Array[i];
             }
+
+            cout << "\n";
         }
 };
 
 int main(void)
 {
+    int length;
+    int i;
+
+    cout << "input array length:" << endl;
+    cin >> length;
+
+    int Array[length];
+
+    cout << "input num:" << endl;
+
+    for (i=0 ; i<length; i++)
+    {
+        cin >> Array[i];
+    }
+
     MyClass obj;
 
-    int test[] = {3,8,2,9,7};
-    int length = sizeof(test)/sizeof(test[0]);
-
-    obj.fun(test, length);
+    obj.fun(Array, length);
 
     return 0;
 }
